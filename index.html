@@ -235,6 +235,19 @@
         font-weight: 500;
       }
 
+      .stat-unit-hashrate {
+        font-size: 1.5rem;
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+      .stat-value-hashrate {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        line-height: 1.2;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+      }
       @media (max-width: 768px) {
         body {
           padding: 1rem;
@@ -301,8 +314,10 @@
       <div class="stats-container">
         <div class="stat-card">
           <div class="stat-label">Network Hashrate</div>
-          <div class="stat-value">
-            {{ hashrate.toLocaleString() }}<span class="stat-unit">H/s</span>
+          <div class="stat-value-hashrate">
+            {{ hashrate.toLocaleString() }}<span class="stat-unit-hashrate"
+              >H/s</span
+            >
           </div>
         </div>
         <div class="stat-card">
